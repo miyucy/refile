@@ -3,11 +3,7 @@ require "rack/test"
 describe Refile::App do
   include Rack::Test::Methods
 
-  def app
-    res = Refile::App.new
-    res.settings.set :public_folder, ""
-    res
-  end
+  let(:app) { Refile::App.new }
 
   before do
     allow(Refile).to receive(:token).and_return("token")
@@ -299,7 +295,7 @@ describe Refile::App do
           allow_any_instance_of(Refile::App).to receive(:backend).and_return(backend)
         end
 
-        it "returns 400 if file is too big" do
+        it "returns 400" do
           post "/store_max_size", file: Rack::Test::UploadedFile.new(path("hello.txt"))
           expect(last_response.status).to eq(400)
         end
