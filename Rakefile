@@ -14,7 +14,9 @@ end
 
 RSpec::Core::RakeTask.new(:spec)
 
-RuboCop::RakeTask.new
+RuboCop::RakeTask.new do |t|
+  t.fail_on_error = false
+end
 
 Rails.application.load_tasks
 
