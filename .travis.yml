@@ -18,3 +18,12 @@ sudo: false
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
+
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+    - rvm: jruby-9.0.1.0
+    - rvm: 2.4.0
+      gemfile: gemfiles/rails41.gemfile
+    - rvm: 2.4.0
+      gemfile: gemfiles/rails42.gemfile
