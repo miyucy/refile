@@ -7,8 +7,9 @@ rvm:
   - jruby-9.0.1.0
 
 gemfile:
-  - Gemfile
+  - gemfiles/rails41.gemfile
   - gemfiles/rails42.gemfile
+  - gemfiles/rails50.gemfile
 
 cache: bundler
 
