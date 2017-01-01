@@ -14,7 +14,7 @@ gem "pry"
 gem "pry-byebug", platforms: [:mri]
 gem "puma"
 gem "rack-test", "~> 0.6.2"
-gem "rails", "~> 4.1.12"
+gem "rails", "~> 5.0.0"
 gem "rake"
 gem "rspec", "~> 3.0"
 gem "rspec-rails", "~> 3.3"
