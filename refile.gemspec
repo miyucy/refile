@@ -16,4 +16,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rest-client", "~> 2.0.0"
   spec.add_dependency "mime-types"
+  spec.add_dependency "rack"
 end
